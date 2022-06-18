@@ -18,13 +18,15 @@
     <div id="root"></div>
 
     <script>
-      const header = React.createElement(
-        "h1",
-        { className: "container" },
-        "헬로월드! : Hello World!"
-      );
+      function Heading() {
+        return React.createElement(
+          "h1",
+          { className: "container" },
+          "헬로월드! : Hello World!"
+        );
+      }
 
-      ReactDOM.render(header, root);
+      ReactDOM.render(Heading(), root);
     </script>
   </body>
 </html>
