@@ -18,11 +18,23 @@
     <div id="root"></div>
 
     <script>
-      function Heading(text) {
-        return React.createElement("h1", { className: "container" }, `${text}`);
+      function Heading(text, handleClick) {
+        return React.createElement(
+          "h1",
+          { className: "container", onClick: handleClick },
+          `${text}`
+        );
       }
 
-      ReactDOM.render(Heading("안녕하세요 세계! : Hello World!"), root);
+      function handleClick(e) {
+        console.log(e);
+        console.log(e.target);
+      }
+
+      ReactDOM.render(
+        Heading("안녕하세요 세계! : Hello World!", handleClick),
+        root
+      );
     </script>
   </body>
 </html>
