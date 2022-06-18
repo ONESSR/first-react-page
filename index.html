@@ -31,13 +31,14 @@
         console.log(e.target);
       }
 
-      const props = {
-        className: "container",
-        onClick: handleClick,
-        text: "안녕하세요 세계! : Hello World!"
-      };
-
-      ReactDOM.render(Heading(props), root);
+      ReactDOM.render(
+        <Heading
+          className="container"
+          onClick={handleClick}
+          text="안녕하세요 세계! : Hello World!"
+        />,
+        root
+      );
     </script>
   </body>
 </html>
